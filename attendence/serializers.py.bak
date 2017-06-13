@@ -1,0 +1,66 @@
+from rest_framework import serializers
+from attendence.models import *
+
+
+class BranchSerializer(serializers.ModelSerializer):
+    """
+    Serialize the Branch data
+    """
+    class Meta:
+        model = Branch
+        fields = ('id', 'created', 'branch_name')
+
+
+class FacultySerializer(serializers.ModelSerializer):
+    """
+    Serialize the Faculty data
+    """
+    class Meta:
+        model = Faculty
+        fields = ('id', 'created', 'faculty_name', 'branch_id')
+
+
+class StudentSerializer(serializers.ModelSerializer):
+    """
+    Serialize the Student data
+    """
+    class Meta:
+        model = Student
+        fields = ('id', 'created', 'roll_no', 'first_name', 'last_name', 'branch_id', 'semester')
+
+
+class SubjectHolderSerializer(serializers.ModelSerializer):
+    """
+    Serialize the SubjectHolder Data
+    """
+    class Meta:
+        model = SubjectHolder
+        fields = ('id', 'branch_id', 'semester', 'subject_name', 'abbr', 'cols')
+
+
+class SubjectSerializer(serializers.ModelSerializer):
+    """
+    Serialize the Subject data
+    """
+    class Meta:
+        model = Subject
+        fields = ('id', 'created', 'subject_name', 'value', 'lecture_type')
+
+
+class AttendanceSerializer(serializers.ModelSerializer):
+    """
+    Serialize the Attendance data
+    """
+    subjects = SubjectSerializer(many=True)
+
+    class Meta:
+        model = Attendance
+        fields = ('id', 'created', 'student_id', 'subjects')
+
+    def create(self, validated_data):
+        subjects_data = validated_data.pop('subjects')
+        attendance = Attendance.objects.create(**validated_data)
+        for subject_data in subjects_data:
+            print(subject_data)
+            Subject.objects.create(attendance_id=attendance, **subject_data)
+        return attendance
