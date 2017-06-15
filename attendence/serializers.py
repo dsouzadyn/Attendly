@@ -11,24 +11,24 @@ class StudentSerializer(serializers.ModelSerializer):
         fields = ('id', 'created', 'roll_no', 'first_name', 'last_name', 'branch_id', 'semester')
 
 
-class SubjectHolderSerializer(serializers.ModelSerializer):
-    """
-    Serialize the SubjectHolder Data
-    """
-    subject_name = serializers.StringRelatedField()
-
-    class Meta:
-        model = SubjectHolder
-        fields = ('id', 'branch', 'semester', 'subject_name')
-
-
 class SubjectSerializer(serializers.ModelSerializer):
     """
     Serialize the Subject data
     """
     class Meta:
         model = Subject
-        fields = ('id', 'created', 'subject_name', 'value', 'lecture_type')
+        fields = ('id', 'subject_name', 'abbr', 'sub_type')
+
+
+class SubjectHolderSerializer(serializers.ModelSerializer):
+    """
+    Serialize the SubjectHolder Data
+    """
+    subject = SubjectSerializer(read_only=True)
+
+    class Meta:
+        model = SubjectHolder
+        fields = ('id', 'branch', 'semester', 'subject')
 
 
 class AttendanceSerializer(serializers.ModelSerializer):

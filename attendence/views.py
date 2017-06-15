@@ -2,31 +2,6 @@ from attendence.serializers import *
 from rest_framework import generics
 
 
-class BranchList(generics.ListCreateAPIView):
-    queryset = Branch.objects.all()
-    serializer_class = BranchSerializer
-
-    def perform_create(self, serializer):
-        serializer.save()
-
-
-class BranchDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Branch.objects.all()
-    serializer_class = BranchSerializer
-
-
-class FacultyList(generics.ListCreateAPIView):
-    queryset = Faculty.objects.all()
-    serializer_class = FacultySerializer
-
-    def perform_create(self, serializer):
-        serializer.save()
-
-
-class FacultyDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Faculty.objects.all()
-    serializer_class = FacultySerializer
-
 
 class StudentList(generics.ListCreateAPIView):
     queryset = Student.objects.all()
@@ -50,8 +25,8 @@ class SubjectHolderList(generics.ListCreateAPIView):
     def get_queryset(self):
 
         semester = self.kwargs['semester']
-        branch_id = self.kwargs['branch_id']
-        return SubjectHolder.objects.filter(branch_id=branch_id, semester=semester)
+        branch = self.kwargs['branch']
+        return SubjectHolder.objects.filter(branch=branch, semester=semester)
 
 #
 # class SubjectCountList(generics.ListAPIView):

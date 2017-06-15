@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^auth/register', djoser.views.RegistrationView.as_view()),
     url(r'^students/$', views.StudentList.as_view()),
     url(r'^students/(?P<pk>[0-9]+)/$', views.StudentDetail.as_view()),
-    url(r'^subjectholder/(?P<branch_id>[0-9]+)/(?P<semester>[0-9]+)/$', views.SubjectHolderList.as_view()),
+    url(r'^subjectholder/(?P<branch>[0-9]+)/(?P<semester>[0-9]+)/$', views.SubjectHolderList.as_view()),
     url(r'^subjects/$', views.SubjectList.as_view()),
     url(r'^subjects/(?P<pk>[0-9]+)/$', views.SubjectDetail.as_view()),
     url(r'^attendance/$', views.AttendanceList.as_view()),

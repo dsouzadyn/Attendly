@@ -37,11 +37,17 @@ class Theory(models.Model):
     actual = models.IntegerField()
     total = models.IntegerField()
 
+    def __str__(self):
+        return str(self.subject.subject_name)
+
 
 class Practical(models.Model):
     subject = models.ForeignKey(Subject, related_name='practical_name')
     actual = models.IntegerField()
     total = models.IntegerField()
+
+    def __str__(self):
+        return str(self.subject.subject_name)
 
 
 class Attendance(models.Model):
@@ -72,7 +78,7 @@ class SubjectHolder(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     branch = models.IntegerField(choices=branches)
     semester = models.IntegerField()
-    subject = models.ForeignKey(Subject, related_name='subject_name')
+    subject = models.ForeignKey(Subject, related_name='subject')
 
     def __str__(self):
         return str(self.subject)
