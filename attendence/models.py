@@ -23,6 +23,17 @@ class Student(models.Model):
         return str(self.roll_no)
 
 
+class Attendance(models.Model):
+    """
+    Attendance table to indicate the attendence of each student in each subject
+    """
+    created = models.DateTimeField(auto_now_add=True)
+    student = models.ForeignKey(Student, related_name='student')
+
+    def __str__(self):
+        return str(self.student.roll_no)
+
+
 class Subject(models.Model):
     subject_name = models.CharField(max_length=128)
     abbr = models.CharField(max_length=30)
@@ -32,35 +43,30 @@ class Subject(models.Model):
         return str(self.subject_name)
 
 
+class SubjectStudent(models.Model):
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    attendance = models.ForeignKey(Attendance, related_name='subs', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.attendance.student.roll_no) + ' ' + self.subject.subject_name
+
+
 class Theory(models.Model):
-    subject = models.ForeignKey(Subject, related_name='theory_name')
+    subject_student = models.ForeignKey(SubjectStudent, related_name='theory', on_delete=models.CASCADE)
     actual = models.IntegerField()
     total = models.IntegerField()
 
     def __str__(self):
-        return str(self.subject.subject_name)
+        return str(self.subject_student)
 
 
 class Practical(models.Model):
-    subject = models.ForeignKey(Subject, related_name='practical_name')
+    subject_student = models.ForeignKey(SubjectStudent, related_name='practical', on_delete=models.CASCADE)
     actual = models.IntegerField()
     total = models.IntegerField()
 
     def __str__(self):
-        return str(self.subject.subject_name)
-
-
-class Attendance(models.Model):
-    """
-    Attendance table to indicate the attendence of each student in each subject
-    """
-    created = models.DateTimeField(auto_now_add=True)
-    student = models.ForeignKey(Student, related_name='student')
-    practical = models.ForeignKey(Practical)
-    theoretical = models.ForeignKey(Theory)
-
-    def __str__(self):
-        return str(self.student.roll_no)
+        return str(self.subject_student)
 
 
 class SubjectHolder(models.Model):
