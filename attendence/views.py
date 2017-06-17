@@ -65,15 +65,19 @@ class SubjectDetail(generics.RetrieveUpdateDestroyAPIView):
 class AttendanceList(generics.ListCreateAPIView):
     serializer_class = AttendanceSerializer
 
+
     def perform_create(self, serializer):
         serializer.save()
 
     def get_queryset(self):
+        semester = None
+        branch = None
         queryset = Attendance.objects.all()
-        branch = self.request.query_params.get('branch', None)
-        semester = self.request.query_params.get('semester', None)
+        if len(self.kwargs) > 0:
+            branch = self.kwargs['branch']
+            semester = self.kwargs['semester']
         if semester is not None and branch is not None:
-            queryset = queryset.filter(student_id__semester=semester, student_id__branch_id=branch)
+            queryset = queryset.filter(student__semester=semester, student__branch=branch)
         return queryset
 
 

@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'^subjects/(?P<pk>[0-9]+)/$', views.SubjectDetail.as_view()),
     url(r'^attendance/$', views.AttendanceList.as_view()),
     url(r'^attendance/(?P<pk>[0-9]+)/$', views.AttendanceDetail.as_view()),
+    url(r'^attendance/(?P<branch>[0-9]+)/(?P<semester>[0-9]+)/$', views.AttendanceList.as_view()),
 ]

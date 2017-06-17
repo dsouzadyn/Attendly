@@ -35,7 +35,6 @@ class SubjectSerializer(serializers.ModelSerializer):
 
 class SubjectStudentSerializer(serializers.ModelSerializer):
 
-
     theory = TheorySerializer(many=True, read_only=True)
     practical = PracticalSerializer(many=True, read_only=True)
 
