@@ -50,11 +50,12 @@ class SubjectHolderList(generics.ListCreateAPIView):
 
 
 class SubjectList(generics.ListCreateAPIView):
-    queryset = Subject.objects.all()
+    queryset = Subject.objects.order_by('+subject_name').all()
     serializer_class = SubjectSerializer
 
     def perform_create(self, serializer):
         serializer.save()
+
 
 
 class SubjectDetail(generics.RetrieveUpdateDestroyAPIView):

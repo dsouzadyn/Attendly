@@ -34,13 +34,13 @@ class SubjectSerializer(serializers.ModelSerializer):
 
 
 class SubjectStudentSerializer(serializers.ModelSerializer):
-
+    subject = SubjectSerializer(read_only=True)
     theory = TheorySerializer(many=True, read_only=True)
     practical = PracticalSerializer(many=True, read_only=True)
 
     class Meta:
         model = SubjectStudent
-        fields = ('id', 'theory', 'practical')
+        fields = ('id', 'theory', 'practical', 'subject')
 
 
 class SubjectHolderSerializer(serializers.ModelSerializer):
