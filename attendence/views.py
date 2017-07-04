@@ -1,6 +1,6 @@
 from attendence.serializers import *
 from rest_framework import generics
-
+from datetime import datetime
 
 
 class StudentList(generics.ListCreateAPIView):
@@ -71,6 +71,8 @@ class AttendanceList(generics.ListCreateAPIView):
         serializer.save()
 
     def get_queryset(self):
+        today = datetime.today()
+        datem = datetime(today.year, today.month, 1)
         semester = None
         branch = None
         queryset = Attendance.objects.all()
@@ -78,6 +80,7 @@ class AttendanceList(generics.ListCreateAPIView):
             branch = self.kwargs['branch']
             semester = self.kwargs['semester']
         if semester is not None and branch is not None:
+            #queryset = queryset.filter(student__semester=semester, student__branch=branch, created__lt=datem)
             queryset = queryset.filter(student__semester=semester, student__branch=branch)
         return queryset
 
