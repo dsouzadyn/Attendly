@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b6303aa-59c5-4c3a-aa38-0c78e7910512" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attendence/views.py" afterPath="$PROJECT_DIR$/attendence/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Attendly/settings.py" afterPath="$PROJECT_DIR$/Attendly/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.json" afterPath="$PROJECT_DIR$/db.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +26,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/attendence/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1104">
-                  <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+                <state relative-caret-position="268">
+                  <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
                   <folding>
                     <marker date="1498732524734" expanded="true" signature="2107:2522" ph="..." />
                   </folding>
@@ -42,6 +42,23 @@
                   <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
                   <folding>
                     <element signature="e#312#321#0" expanded="true" />
+                    <marker date="1499337248875" expanded="true" signature="1835:2237" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="1981:2229" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2254:2723" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2260:2720" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2397:2713" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2433:2702" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2865:2991" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2882:2989" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="2995:3096" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3126:3520" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3132:3229" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3237:3324" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3332:3420" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3428:3517" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3536:3599" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3603:3679" ph="..." />
+                    <marker date="1499337248875" expanded="true" signature="3775:3876" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -51,11 +68,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/attendence/serializers.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+                <state relative-caret-position="153">
+                  <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -75,10 +92,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/attendence/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
+                <state relative-caret-position="155">
                   <caret line="83" column="89" lean-forward="true" selection-start-line="83" selection-start-column="89" selection-end-line="83" selection-end-column="89" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
@@ -344,7 +361,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29836065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29836065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -773,16 +790,23 @@
           <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
           <folding>
             <element signature="e#312#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attendence/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1499337248875" expanded="true" signature="1835:2237" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="1981:2229" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2254:2723" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2260:2720" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2397:2713" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2433:2702" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2865:2991" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2882:2989" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="2995:3096" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3126:3520" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3132:3229" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3237:3324" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3332:3420" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3428:3517" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3536:3599" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3603:3679" ph="..." />
+            <marker date="1499337248875" expanded="true" signature="3775:3876" ph="..." />
           </folding>
         </state>
       </provider>
@@ -809,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attendence/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="268">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
             <marker date="1498732524734" expanded="true" signature="2107:2522" ph="..." />
           </folding>
@@ -819,10 +843,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attendence/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="155">
           <caret line="83" column="89" lean-forward="true" selection-start-line="83" selection-start-column="89" selection-end-line="83" selection-end-column="89" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attendence/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
