@@ -12,6 +12,7 @@ class Student(models.Model):
         (4, 'Information Technology'),
         (5, 'EXTC'),
     )
+    batch_no = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)

@@ -32,6 +32,22 @@ class Command(BaseCommand):
                 if len(ss) == 0:
                     ss = SubjectStudent(attendance=attendance, subject=subject)
                     ss.save()
+                else:
+                    ss = ss[0]
+                if subject.sub_type == 4:
+                    th = Theory.objects.filter(subject_student=ss)
+                    if len(th) == 0 and int(row[1]) != 0 and int(row[2]) != 0:
+                        th = Theory(subject_student=ss, actual=row[1], total=max_data[1])
+                        th.save()
+                    pr = Practical.objects.filter(subject_student=ss)
+                    if len(pr) == 0 and int(row[1]) != 0 and int(row[2]) != 0:
+                        pr = Practical(subject_student=ss, actual=row[2], total=max_data[2])
+                        pr.save()
+                    else:
+                        th = Theory(subject_student=ss, actual=0, total=0)
+                        th.save()
+                        pr = Practical(subject_student=ss, actual=0, total=0)
+                        pr.save()
                 if subject.sub_type == 1:
                     th = Theory.objects.filter(subject_student=ss)
                     if len(th) == 0:
@@ -57,9 +73,8 @@ class Command(BaseCommand):
                         th.save()
                     pr = Practical.objects.filter(subject_student=ss)
                     if len(pr) == 0:
-                        pr = Practical(subject_student=ss, actual=0, total=0)
+                        pr = Practical(subject_student=ss, actual=row[2], total=row[2])
                         pr.save()
-
                 else:
                     pass
                 self.stdout.write(self.style.SUCCESS(
