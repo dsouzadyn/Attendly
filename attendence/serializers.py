@@ -63,7 +63,7 @@ class AttendanceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Attendance
-        fields = ('id', 'created', 'student', 'subs')
+        fields = ('id', 'created', 'student', 'subs', 'batch_no')
 
     # def create(self, validated_data):
     #     subjects_data = validated_data.pop('subjects')

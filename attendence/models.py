@@ -12,7 +12,6 @@ class Student(models.Model):
         (4, 'Information Technology'),
         (5, 'EXTC'),
     )
-    batch_no = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -30,6 +29,7 @@ class Attendance(models.Model):
     """
     created = models.DateTimeField(auto_now_add=True)
     student = models.ForeignKey(Student, related_name='student')
+    batch_no = models.IntegerField()
 
     def __str__(self):
         return str(self.student.roll_no)
